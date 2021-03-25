@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+  width: 100%;
+  background-color: aqua;
+}
+
+
+
+header{
+  height: 100px;
+  width: 100%;
+  background-color: brown;
+  z-index: 1;
+  position: fixed;
+}
+
+footer{
+  height: 110px;
+  background-color: red;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+}
+
+
+.nav-left{
+  
+  height: 100vh;
+  background-color: chartreuse;
+  z-index: 4;
+  position: fixed;
+}
+
+main{
+  height: calc(100vh - 110px);
+  background-color: cornflowerblue;
+}
+
+
+
+
+
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+
+
+   /* ------ XS ------ */
+@media all and (max-width: 768px){
+  .nav-left{
+    width: 60px;
+  }
+}
+
+
+   /* ------ SM ------ */
+@media all and (min-width: 769px){
+  .nav-left{
+    width: 280px;
+  }
+}
+
+
+   /* ------ LG ------ */
+@media all and (min-width: 971px){
+  
+}
+
+
+
+/* ---------------- MEDIA QUERIES ---------------- */
