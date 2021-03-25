@@ -17,7 +17,10 @@ main{
   width: 100%;
   background-color: aqua;
 }
-
+/* Color and Background */
+.adp-white{
+  color: white;
+}
 
 /* -------- HEADER -------- */
 header{
@@ -60,27 +63,12 @@ header{
   position: fixed;
   display: flex;
 }
-.logo-nav-left{
-  margin-top: 16px;
-  margin-left: 20px;
- }
- 
-.logo-nav-left img{
- width: 60%;
- margin-bottom: 24px;
-}
-.logo-nav-left div{
-  color: darkgray;
-}
-.logo-nav-left h4{
-  color: white;
-  text-transform: uppercase;
-}
+
 
 
 /* -------- FOOTER -------- */
 footer{
-  height: 110px;
+  height: 105px;
   background-color: red;
   position: fixed;
   z-index: 5;
@@ -105,6 +93,47 @@ footer{
 @media all and (min-width: 769px){
   .nav-left{
     width: 280px;
+    font-weight: 700;
+  }
+  
+  .logo-nav-left{
+    margin-top: 16px;
+    margin-left: 20px;
+   }
+
+   .adp-logo{
+   width: 60%;
+   margin-bottom: 32px;
+  }
+
+  .logo-nav-left div{
+    color: darkgray;
+    margin-bottom: 23px;
+  }
+  .img-nav-left{
+    display: flex;
+    align-items: center;
+  }
+  .img-nav-left img{
+    width: 10%;
+  }
+  .img-nav-left span{
+    margin-left: 5px;
+  }
+  
+  .logo-nav-left h4{
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+
+  #adp-plus{
+    color: black; 
+    background-color: darkgray;
+    font-size: 40px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
   }
 }
 
