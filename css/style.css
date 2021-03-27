@@ -20,6 +20,9 @@ main:after{
   clear: both;
 }
 
+.adp-cursor{
+  cursor: pointer;
+}
 
 .wrapper{
   height: 100vh;
@@ -63,11 +66,10 @@ header{
 /* -------- NAV LEFT -------- */
 .nav-left{
   float: left;
-  height: 100%;
+  height: 100vh;
   background-color: black;
   z-index: 4;
   position: fixed;
-  height: 100%;
 }
 
 
@@ -76,37 +78,77 @@ header{
 }
 
 .nav-left-bottom{
-  width: 100%;
   height: 100px;
-  background-color: blueviolet;
 }
   /* nav-left-bottom */
 
 .adp-img-br{
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   background-color: darkgray;
   border-radius: 50%;
   margin-left: 20px;
+  margin-right: 10px;
 }
 .adp-flex-nav{
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 .nav-left-bottom div span{
-  margin-left: 10px;
   font-size: 16px;
 }
+.nav-sx-bottom{
+  margin-left: 20px;
+  color:darkgray;
+  padding-bottom: 7px;
+  margin-right: 20px;
+}
+
 
 /* -------- FOOTER -------- */
 footer{
   height: 90px;
-  background-color: red;
   position: fixed;
   z-index: 5;
   width: 100%;
+  display: flex;
+}
+/* CONTENUTI PLAYER */
+.adp-foot{
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adp-foot img{
+  width: 80%;
 }
 
+
+.adp-foot2{
+  
+  height: 100%;
+  background-color: beige;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+
+.adp-flex-foot{
+  background-color: brown;
+}
+.adp-player{
+  background-color: darkgray;
+}
+.adp-player2{
+  
+  height: 100%;
+  background-color: cornflowerblue;
+}
 
 
 /* ---------------- MEDIA QUERIES ---------------- */
@@ -140,13 +182,26 @@ footer{
     margin-bottom: 12px;
     cursor: pointer;
   }
+  
+  /* FOOTER */
+  .adp-foot{
+    width: 60px; 
+  }
+  .adp-foot2{
+    width: 70px;
+    padding: 5px;
+  }
+  .adp-player{
+    width: calc(100% - 360px);
+  }
+  .adp-player2{
+    width: 180px;
+  }
 }
-
 
    /* ------ SM ------ */
 @media all and (min-width: 769px){
  
-
   /* NAV-LEFT */
   .logo-small{
     display: none;
@@ -224,10 +279,31 @@ footer{
   #logo-small{
     display: none;
   }
+
+  .nav-sx-bottom{
+    border-bottom: 1px solid darkgray;
+  }
+
   /* NAV-LEFT - fine*/
+
+  /* FOOTER */
+  .adp-foot{
+    width: 80px;
+  }
+  .adp-foot2{
+   width: 100px;
+   padding: 5px;
+  }
+  .adp-flex-foot{
+    width: 50px;
+  }
+  .adp-player{
+    width: calc(100% - 460px);
+  }
+  .adp-player2{
+    width: 230px;
+  }
 }
-
-
    /* ------ LG ------ */
 @media all and (min-width: 971px){
   
