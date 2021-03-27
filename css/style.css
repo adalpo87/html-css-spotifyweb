@@ -127,7 +127,6 @@ footer{
 
 
 .adp-foot2{
-  
   height: 100%;
   background-color: beige;
   display: flex;
@@ -137,19 +136,52 @@ footer{
   font-size: 12px;
 }
 
-
 .adp-flex-foot{
   background-color: brown;
+}
+.adp-flex-foot i{
+  cursor: pointer;
 }
 .adp-player{
   background-color: darkgray;
 }
 .adp-player2{
-  
   height: 100%;
   background-color: cornflowerblue;
 }
+/*--------------PLAYER INFAME-------------- */
+.player-top{
+  background-color: darkgreen;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.player-bottom{
+  background-color: darkkhaki;
+  height: 50%;
+  display: flex;
+}
+     /* Plater TOP */
+    .player-top div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      color: white;
+    }
+    .player-top div i{
+      cursor: pointer;
+    }
+    
+    .play i{
+      border: 3px solid white;
+      padding: 8px;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+    }
 
+     /* Plater BOTTOM */
 
 /* ---------------- MEDIA QUERIES ---------------- */
 
@@ -190,7 +222,17 @@ footer{
   .adp-foot2{
     width: 70px;
     padding: 5px;
+    font-size: 10px;
   }
+  .adp-flex-foot{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: darkgray;
+  }
+  
   .adp-player{
     width: calc(100% - 360px);
   }
@@ -288,14 +330,19 @@ footer{
 
   /* FOOTER */
   .adp-foot{
-    width: 80px;
+    width: 60px;
   }
   .adp-foot2{
-   width: 100px;
+   width: 110px;
    padding: 5px;
+   font-size: 10px;
   }
   .adp-flex-foot{
-    width: 50px;
+    width: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: darkgray;
   }
   .adp-player{
     width: calc(100% - 460px);
