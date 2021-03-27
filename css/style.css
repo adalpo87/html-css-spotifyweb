@@ -6,16 +6,25 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
+  min-width: 500px;
 }
 
 main{
-  height: calc(100vh - 110px);
-  background-color: cornflowerblue;
+  height: calc(100vh - 90px);
+  background-color: cadetblue;
 }
 
+main:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 .wrapper{
+  height: 100vh;
   width: 100%;
-  background-color: aqua;
+ /*  background-color: black; */
 }
 /* Color and Background */
 .adp-white{
@@ -51,24 +60,47 @@ header{
 /* -------- CONTENT -------- */
 
 
-
-
-
 /* -------- NAV LEFT -------- */
 .nav-left{
-  
-  height: 100vh;
+  float: left;
+  height: 100%;
   background-color: black;
   z-index: 4;
   position: fixed;
-  display: flex;
+  height: 100%;
 }
 
 
+.logo-nav-left{
+  height: calc(100% - 190px);
+}
+
+.nav-left-bottom{
+  width: 100%;
+  height: 100px;
+  background-color: blueviolet;
+}
+  /* nav-left-bottom */
+
+.adp-img-br{
+  width: 40px;
+  height: 40px;
+  background-color: darkgray;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.adp-flex-nav{
+  display: flex;
+  align-items: center;
+}
+.nav-left-bottom div span{
+  margin-left: 10px;
+  font-size: 16px;
+}
 
 /* -------- FOOTER -------- */
 footer{
-  height: 105px;
+  height: 90px;
   background-color: red;
   position: fixed;
   z-index: 5;
@@ -83,17 +115,46 @@ footer{
 
    /* ------ XS ------ */
 @media all and (max-width: 768px){
+  .xs-display-none{
+    display: none;
+  }
+
   .nav-left{
     width: 60px;
+  }
+  .adp-logo{
+    display: none;
+  }
+  .logo-nav-left span{
+    display: none;
+  }
+  .logo-nav-left{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    text-align: center;
+    align-items: center
+  }
+  .logo-nav-left img{
+    width: 60%;
+    margin-bottom: 12px;
+    cursor: pointer;
   }
 }
 
 
    /* ------ SM ------ */
 @media all and (min-width: 769px){
+ 
+
+  /* NAV-LEFT */
+  .logo-small{
+    display: none;
+  }
   .nav-left{
-    width: 280px;
-    font-weight: 700;
+    width: 230px;
+    font-weight: 500;
+    font-size: 14px;
   }
   
   .logo-nav-left{
@@ -102,7 +163,7 @@ footer{
    }
 
    .adp-logo{
-   width: 60%;
+   width: 70%;
    margin-bottom: 32px;
   }
 
@@ -114,8 +175,13 @@ footer{
     display: flex;
     align-items: center;
   }
+
+  .nav-left div:hover{
+    color:white;
+  }
+
   .img-nav-left img{
-    width: 10%;
+    width: 16%;
   }
   .img-nav-left span{
     margin-left: 5px;
@@ -135,6 +201,30 @@ footer{
     width: 50px;
     height: 50px;
   }
+
+  #adp-playlist{
+    display: flex;
+    align-items: center;
+  }
+  
+  #adp-playlist::before{
+    content: "+";
+    background-color: darkgray;
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    margin-right: 12px;
+    color: black;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #logo-small{
+    display: none;
+  }
+  /* NAV-LEFT - fine*/
 }
 
 
@@ -146,3 +236,4 @@ footer{
 
 
 /* ---------------- MEDIA QUERIES ---------------- */
+
