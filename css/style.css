@@ -114,7 +114,8 @@ footer{
   width: 100%;
   display: flex;
 }
-/* CONTENUTI PLAYER */
+
+/* CONTENUTI FOOTER */
 .adp-foot{
   background-color: aqua;
   display: flex;
@@ -149,6 +150,8 @@ footer{
   height: 100%;
   background-color: cornflowerblue;
 }
+
+
 /*--------------PLAYER INFAME-------------- */
 .player-top{
   background-color: darkgreen;
@@ -160,8 +163,9 @@ footer{
   background-color: darkkhaki;
   height: 50%;
   display: flex;
+  justify-content: center;
 }
-     /* Plater TOP */
+     /* Player TOP */
     .player-top div{
       display: flex;
       justify-content: center;
@@ -181,7 +185,51 @@ footer{
       cursor: pointer;
     }
 
-     /* Plater BOTTOM */
+     /* Player BOTTOM */
+    .timer1{
+      width: 50px;
+      background-color: slategrey;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 10px;
+      color: white;
+    }
+    .bar{
+      width: 400px;
+      background-color: darkgoldenrod;
+    }
+
+    .timer2{
+      width: 50px;
+      background-color: tomato;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 10px;
+      color: white;
+    }
+    /* BAR */
+
+    .bar{
+      padding: 0 20px;
+      position: relative;
+    }
+    .line1{
+      width: 90%;
+      border: 2px solid rgb(112, 105, 105);
+      height: 3px;
+      position: absolute;
+      top: 47%;
+    }
+
+    .line2{
+      position: absolute;
+      width: 20%;
+      border: 2px solid gainsboro;
+      top: 47%;
+    }
+
 
 /* ---------------- MEDIA QUERIES ---------------- */
 
@@ -239,6 +287,7 @@ footer{
   .adp-player2{
     width: 180px;
   }
+  
 }
 
    /* ------ SM ------ */
