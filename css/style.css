@@ -113,11 +113,11 @@ footer{
   z-index: 5;
   width: 100%;
   display: flex;
+  background-color: rgb(32, 30, 30);
 }
 
 /* CONTENUTI FOOTER */
 .adp-foot{
-  background-color: aqua;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,7 +129,6 @@ footer{
 
 .adp-foot2{
   height: 100%;
-  background-color: beige;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -137,30 +136,22 @@ footer{
   font-size: 12px;
 }
 
-.adp-flex-foot{
-  background-color: brown;
-}
 .adp-flex-foot i{
   cursor: pointer;
 }
-.adp-player{
-  background-color: darkgray;
-}
+
 .adp-player2{
   height: 100%;
-  background-color: cornflowerblue;
 }
 
 
 /*--------------PLAYER INFAME-------------- */
 .player-top{
-  background-color: darkgreen;
   height: 50%;
   display: flex;
   justify-content: center;
 }
 .player-bottom{
-  background-color: darkkhaki;
   height: 50%;
   display: flex;
   justify-content: center;
@@ -188,21 +179,19 @@ footer{
      /* Player BOTTOM */
     .timer1{
       width: 50px;
-      background-color: slategrey;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       font-size: 10px;
       color: white;
     }
+
     .bar{
       width: 400px;
-      background-color: darkgoldenrod;
     }
 
     .timer2{
       width: 50px;
-      background-color: tomato;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -217,18 +206,116 @@ footer{
     }
     .line1{
       width: 90%;
-      border: 2px solid rgb(112, 105, 105);
-      height: 3px;
+      border: 2px solid gray;
+      background-color: gray;
+      height: 5px;
       position: absolute;
       top: 47%;
+    }
+    .bar:hover .greenline{
+      display: block;
+    }
+    .bar:hover .circle{
+      display: block;
     }
 
     .line2{
       position: absolute;
       width: 20%;
       border: 2px solid gainsboro;
+      background-color: gainsboro;
       top: 47%;
     }
+    .greenline{
+      position: absolute;
+      width: 20%;
+      border: 2px solid chartreuse;
+      background-color: chartreuse;
+      top: 47%;
+      z-index: 12;
+      display: none;
+    }
+
+    .circle{
+      width: 12px;
+      height: 12px;
+      background-color: rgb(247, 235, 235);
+      border-radius: 50%;
+      position: absolute;
+      top: 39%;
+      left: 23%;
+      z-index: 121212;
+      display: none;
+      cursor: pointer;
+    }
+    
+  /* -------- Controllo Volume DX */
+    .adp-volume{
+      display: flex;
+      align-items: center;
+    }
+    .adp-volume div i{
+      margin-right: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .volume{
+      position: relative;
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+    }
+
+    .volume:hover .volume-green{
+      display: block;
+    }
+    .volume:hover .circle2{
+      display: block;
+    }
+
+    .line-volume{
+
+      width: 90%;
+      background-color: gray;
+      height: 2px;
+      border: 2px solid gray;
+      position: absolute;
+      top: 50%;
+    }
+    
+    .line-volume2{
+      width: 20%;
+      height: 3px;
+      background-color: gainsboro;
+      border: 2px solid gainsboro;
+      position: absolute;
+      top: 50%;
+    }
+
+    .volume-green{
+      width: 20%;
+      height: 3px;
+      background-color: chartreuse;
+      border: 2px solid chartreuse;
+      position: absolute;
+      top: 50%;
+      display: none;
+    }
+
+    .circle2{
+      width: 10px;
+      height: 10px;
+      background-color: rgb(247, 235, 235);
+      border-radius: 50%;
+      position: absolute;
+      top: 43%;
+      left: 20%;
+      display: none;
+      cursor: pointer;
+    }
+
 
 
 /* ---------------- MEDIA QUERIES ---------------- */
@@ -284,7 +371,7 @@ footer{
   .adp-player{
     width: calc(100% - 360px);
   }
-  .adp-player2{
+  .adp-volume{
     width: 180px;
   }
   
@@ -396,9 +483,10 @@ footer{
   .adp-player{
     width: calc(100% - 460px);
   }
-  .adp-player2{
+  .adp-volume{
     width: 230px;
   }
+  
 }
    /* ------ LG ------ */
 @media all and (min-width: 971px){
