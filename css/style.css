@@ -7,11 +7,11 @@
 body{
   font-family: 'Montserrat', sans-serif;
   min-width: 500px;
+  background-color: rgb(21, 25, 32);
 }
 
 main{
   height: calc(100vh - 90px);
-  background-color: cadetblue;
 }
 
 main:after{
@@ -61,7 +61,11 @@ header{
 }
 
 /* -------- CONTENT -------- */
-
+.content{
+  color: white;
+  padding-top: 130px;
+  padding-right: 20px;
+}
 
 /* -------- NAV LEFT -------- */
 .nav-left{
@@ -136,8 +140,12 @@ footer{
   font-size: 12px;
 }
 
+
 .adp-flex-foot i{
   cursor: pointer;
+}
+.adp-flex-foot i:hover{
+  color: white;
 }
 
 .adp-player2{
@@ -147,6 +155,7 @@ footer{
 
 /*--------------PLAYER INFAME-------------- */
 .player-top{
+  padding-top: 15px;
   height: 50%;
   display: flex;
   justify-content: center;
@@ -249,7 +258,7 @@ footer{
       cursor: pointer;
     }
     
-  /* -------- Controllo Volume DX */
+  /* -------- Controllo Volume DX -------- */
     .adp-volume{
       display: flex;
       align-items: center;
@@ -359,6 +368,13 @@ footer{
     padding: 5px;
     font-size: 10px;
   }
+  .adp-foot2 h4{
+    color: white;
+  }
+  .adp-foot2 p{
+    color: darkgray;
+  }
+
   .adp-flex-foot{
     width: 50px;
     display: flex;
@@ -374,7 +390,10 @@ footer{
   .adp-volume{
     width: 180px;
   }
-  
+  /* ------------------CONTENUTI------------------ */
+  .content{
+    padding-left: 80px;
+  }
 }
 
    /* ------ SM ------ */
@@ -473,6 +492,15 @@ footer{
    padding: 5px;
    font-size: 10px;
   }
+  .adp-foot2 h4{
+    color: white;
+    font-size: 14px;
+  }
+  .adp-foot2 p{
+    color: darkgray;
+    font-size: 12px;
+  }
+
   .adp-flex-foot{
     width: 60px;
     display: flex;
@@ -486,7 +514,10 @@ footer{
   .adp-volume{
     width: 230px;
   }
-  
+  /* ------------------CONTENUTI------------------ */
+  .content{
+    padding-left: 250px;
+  }
 }
    /* ------ LG ------ */
 @media all and (min-width: 971px){
