@@ -19,14 +19,18 @@ main:after{
   clear: both;
 }
 
+
 .adp-cursor{
   cursor: pointer;
+}
+
+.pos-rel{
+  position: relative;
 }
 
 .wrapper{
   height: 100vh;
   width: 100%;
- /*  background-color: black; */
 }
 /* Color and Background */
 .adp-white{
@@ -71,20 +75,114 @@ header{
   flex-wrap: wrap;
 }
 
-.box-album{
-  width: 260px;
-  height: 300px;
-  background-color: blanchedalmond;
-  
-  overflow: auto;
-  justify-content: flex-start;
+.cover{
+  padding-top: 110px;
+  width: 100%;
+  margin-top: 20px;
 }
 
+/* --- COVER LIST --- */
+.cover-list{
+  text-align: center;
+  margin-top: 20px;
+  width: 90%;
+  margin: auto;
+  height: 70px; 
+  position: relative;
+}
+.cover-list ul{
+  max-height: 80px;
+  overflow:hidden
+}
+.cover-list ul li{
+  list-style: none;
+  display: inline;
+  margin-left: 15px;
+}
+.cover-list ul li a{
+  text-decoration: none;
+  color: darkgray;
+  font-size: 12px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.cover-list ul li a:hover{
+  color: white;
+}
 
+.list-green-line{
+  width: 35px;
+  height: 1px;
+  border: 1px solid chartreuse;
+  position: absolute;
+  top: 100%;
+  left: 32%;
+}
+ /* ---------------- BOX ---------------- */
+ .cover h2, .cover p{
+   margin-left: 20px;
+   margin-bottom: 10px;
+}
 
+.cover p{
+  color: darkgray;
+}
 
+ .cover-album{
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 50px;
+ }
 
+ .box-album{
+  width: 260px;
+  overflow: auto;
+}
+.album{
+  width: 260px;
+  height: 260px;
+  position: relative;
+}
 
+.box-album h3, .box-album p{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.album img{
+  width: 100%;
+}
+
+.fav-play{
+  font-size: 35px;
+  border: 6px solid white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.album:hover .fav-play{
+  display: block;
+  z-index: 899999;
+}
+
+.album:hover:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+}
 
 
 /* -------- NAV LEFT -------- */
@@ -96,11 +194,13 @@ header{
 
 
 .logo-nav-left{
-  height: calc(100% - 90px);
+  height: calc(100% - 100px);
+  overflow-y: auto;
 }
 
 .nav-left-bottom{
   height: 100px;
+  z-index: 1312312;
 }
   /* nav-left-bottom */
 
@@ -126,14 +226,6 @@ header{
   padding-bottom: 7px;
   margin-right: 20px;
 }
-
-
-
-
-
-
-
-
 
 
 /* -------- FOOTER -------- */
@@ -178,7 +270,7 @@ footer{
 }
 
 
-/*--------------PLAYER INFAME-------------- */
+/*--------------PLAYER-------------- */
 .player-top{
   padding-top: 15px;
   height: 50%;
@@ -297,11 +389,9 @@ footer{
       display: flex;
       align-items: center;
     }
-    /* No media Queries */
     .volume:hover .volume-green{
       display: block;
     }
-    /* No media Queries */
     .volume:hover .circle2{
       display: block;
     }
@@ -333,7 +423,6 @@ footer{
       top: 50%;
       display: none;
     }
-/* No media Queries */
     .circle2{
       width: 10px;
       height: 10px;
@@ -443,12 +532,21 @@ footer{
     padding-left: 20px;
   }
   /* ------------------CONTENUTI------------------ */
+  
+  .cover-album{
+    justify-content: flex-start;
+    
+  }
+
   .box-album{
-    margin: 20px auto;
+   margin-top: 20px;
+   margin-left: 20px;
   }
 }
 
+  /* -------------- LISTA -------------- */
 
+  
 
 
 
@@ -508,32 +606,27 @@ footer{
     margin-bottom: 22px;
   }
 
-  #adp-plus{
-    color: black; 
-    background-color: darkgray;
-    font-size: 40px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
+
+  .adp-playlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 40%;
   }
 
-  #adp-playlist{
-    display: flex;
-    align-items: center;
-  }
-  
-  #adp-playlist::before{
+  .adp-plus::before{
     content: "+";
     background-color: darkgray;
-    width: 44px;
-    height: 44px;
-    display: inline-block;
+    width: 40px;
+    height: 40px;
     margin-right: 12px;
     color: black;
     font-size: 40px;
-    display: flex;
-    align-items: center;
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
   }
   
   #logo-small{
@@ -598,9 +691,7 @@ footer{
   }
 }
 
-
-
-
+/* -------------- LISTA -------------- */
 
 
 
