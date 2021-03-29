@@ -195,7 +195,7 @@ header{
 
 .logo-nav-left{
   height: calc(100% - 100px);
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .nav-left-bottom{
@@ -611,7 +611,8 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 40%;
+    height: 50%;
+    overflow-y: scroll;
   }
 
   .adp-plus::before{
