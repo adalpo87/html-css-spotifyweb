@@ -611,8 +611,8 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 50%;
-    overflow-y: scroll;
+    height: 40%;
+    overflow-y: auto;
   }
 
   .adp-plus::before{
