@@ -6,7 +6,6 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
-  min-width: 500px;
   background-color: rgb(21, 25, 32);
 }
 
@@ -34,10 +33,13 @@ main:after{
   color: white;
 }
 
+
+
+
+
 /* -------- HEADER -------- */
 header{
   height: 110px;
-  width: 100%;
   background-color: #101114;
   z-index: 1;
   position: fixed;
@@ -62,23 +64,39 @@ header{
 
 /* -------- CONTENT -------- */
 .content{
+
   color: white;
-  padding-top: 130px;
-  padding-right: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
+
+.box-album{
+  width: 260px;
+  height: 300px;
+  background-color: blanchedalmond;
+  
+  overflow: auto;
+  justify-content: flex-start;
+}
+
+
+
+
+
+
+
 
 /* -------- NAV LEFT -------- */
 .nav-left{
   float: left;
-  height: 100vh;
+  height: 100%;
   background-color: black;
-  z-index: 4;
-  position: fixed;
 }
 
 
 .logo-nav-left{
-  height: calc(100% - 190px);
+  height: calc(100% - 90px);
 }
 
 .nav-left-bottom{
@@ -110,14 +128,21 @@ header{
 }
 
 
+
+
+
+
+
+
+
+
 /* -------- FOOTER -------- */
 footer{
   height: 90px;
-  position: fixed;
-  z-index: 5;
   width: 100%;
   display: flex;
   background-color: rgb(32, 30, 30);
+  position: fixed;
 }
 
 /* CONTENUTI FOOTER */
@@ -195,10 +220,6 @@ footer{
       color: white;
     }
 
-    .bar{
-      width: 400px;
-    }
-
     .timer2{
       width: 50px;
       display: flex;
@@ -208,7 +229,6 @@ footer{
       color: white;
     }
     /* BAR */
-
     .bar{
       padding: 0 20px;
       position: relative;
@@ -220,6 +240,7 @@ footer{
       height: 5px;
       position: absolute;
       top: 47%;
+      left: 6%;
     }
     .bar:hover .greenline{
       display: block;
@@ -268,7 +289,7 @@ footer{
       color: white;
       cursor: pointer;
     }
-
+    
     .volume{
       position: relative;
       width: 100%;
@@ -276,16 +297,16 @@ footer{
       display: flex;
       align-items: center;
     }
-
+    /* No media Queries */
     .volume:hover .volume-green{
       display: block;
     }
+    /* No media Queries */
     .volume:hover .circle2{
       display: block;
     }
 
     .line-volume{
-
       width: 90%;
       background-color: gray;
       height: 2px;
@@ -312,7 +333,7 @@ footer{
       top: 50%;
       display: none;
     }
-
+/* No media Queries */
     .circle2{
       width: 10px;
       height: 10px;
@@ -327,6 +348,28 @@ footer{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------- MEDIA QUERIES ---------------- */
 
 
@@ -335,6 +378,9 @@ footer{
 @media all and (max-width: 768px){
   .xs-display-none{
     display: none;
+  }
+  header{
+    width: calc(100% - 50px);
   }
 
   .nav-left{
@@ -387,18 +433,35 @@ footer{
   .adp-player{
     width: calc(100% - 360px);
   }
+
+  .bar{
+    width: 400px;
+  }
+
   .adp-volume{
-    width: 180px;
+    width: 30%;
+    padding-left: 20px;
   }
   /* ------------------CONTENUTI------------------ */
-  .content{
-    padding-left: 80px;
+  .box-album{
+    margin: 20px auto;
   }
 }
 
-   /* ------ SM ------ */
+
+
+
+
+
+
+
+   /* ------------------ SM ------------------ */
 @media all and (min-width: 769px){
- 
+  
+  header{
+    width: calc(100% - 230px);
+  }
+
   /* NAV-LEFT */
   .logo-small{
     display: none;
@@ -483,6 +546,8 @@ footer{
 
   /* NAV-LEFT - fine*/
 
+
+
   /* FOOTER */
   .adp-foot{
     width: 60px;
@@ -511,14 +576,36 @@ footer{
   .adp-player{
     width: calc(100% - 460px);
   }
+
+  .bar{
+    width: 600px;
+  }
+
   .adp-volume{
     width: 230px;
   }
+
   /* ------------------CONTENUTI------------------ */
+  .box-album{
+    margin:20px 20px;
+  }
+
   .content{
-    padding-left: 250px;
+    float: left;
+    height: 100%;
+    width: calc(100% - 230px);
+    overflow-y: auto;
   }
 }
+
+
+
+
+
+
+
+
+
    /* ------ LG ------ */
 @media all and (min-width: 971px){
   
