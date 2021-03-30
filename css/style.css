@@ -167,6 +167,7 @@ header{
   background-color: black;
   transform: translate(-50%, -50%);
   display: none;
+  cursor: pointer;
 }
 
 .album:hover .fav-play{
